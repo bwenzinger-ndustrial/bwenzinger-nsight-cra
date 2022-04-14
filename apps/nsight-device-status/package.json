@@ -9,8 +9,8 @@
     "url": "git+https://github.com/ndustrialio/nsight-react.git"
   },
   "dependencies": {
-    "@ndustrial/nd-inputs-react": "^4.0.3",
-    "@ndustrial/nd-table-react": "^2.0.4",
+    "@ndustrial/nd-inputs-react": "^0.1.0",
+    "@ndustrial/nd-table-react": "^0.1.0",
     "@ndustrial/nsight-common": "^1.2.1",
     "@ndustrial/contxt-sdk-wrapper": "0.1.2",
     "@ndustrial/nsight-test-utils": "^2.0.1",

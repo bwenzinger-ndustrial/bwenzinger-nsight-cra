@@ -12,8 +12,8 @@
   "author": "ndustrial.io <dev@ndustrial.io> (ndustrial.io)",
   "license": "UNLICENSED",
   "dependencies": {
-    "@ndustrial/nd-dropdown-react": "^3.1.2",
-    "@ndustrial/nd-table-react": "^3.0.2",
+    "@ndustrial/nd-dropdown-react": "^0.1.0",
+    "@ndustrial/nd-table-react": "^0.1.0",
     "@ndustrial/nsight-common": "^1.2.1",
     "@ndustrial/contxt-sdk-wrapper": "0.1.2",
     "currency.js": "^1.2.2",

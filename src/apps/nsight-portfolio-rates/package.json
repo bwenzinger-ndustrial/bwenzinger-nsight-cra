@@ -12,7 +12,7 @@
   "author": "ndustrial.io <dev@ndustrial.io> (ndustrial.io)",
   "license": "UNLICENSED",
   "dependencies": {
-    "@ndustrial/nd-theme-react": "^2.2.2",
+    "@ndustrial/nd-theme-react": "^0.1.0",
     "@ndustrial/nsight-common": "^1.2.1",
     "ag-grid-community": "^25.1.0",
     "ag-grid-enterprise": "^25.1.0",
