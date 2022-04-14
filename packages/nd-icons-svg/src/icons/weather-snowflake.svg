@@ -1,0 +1,25 @@
+<svg width="1em" height="1em" stroke="#0B588A" fill="none" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke-width="1" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(2.000000, 2.000000)">
+            <g stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <circle cx="10" cy="18.1818182" r="1.81818182"></circle>
+                    <circle transform="translate(10.000000, 1.818182) scale(1, -1) translate(-10.000000, -1.818182) " cx="10" cy="1.81818182" r="1.81818182"></circle>
+                    <path d="M10.9090909,5.45454545 L9.09090909,5.45454545" transform="translate(10.000000, 5.454545) scale(1, -1) rotate(270.000000) translate(-10.000000, -5.454545) "></path>
+                    <path d="M10.9090909,14.5454545 L9.09090909,14.5454545" transform="translate(10.000000, 14.545455) rotate(270.000000) translate(-10.000000, -14.545455) "></path>
+                    <circle cx="10" cy="10" r="2.72727273"></circle>
+                    <path d="M5.36363636,14.6363636 L5.37272727,14.6363636"></path>
+                    <path d="M14.6363636,14.6363636 L14.6454545,14.6363636"></path>
+                    <path d="M5.36363636,5.36363636 L5.37272727,5.36363636"></path>
+                    <path d="M14.6363636,5.36363636 L14.6454545,5.36363636"></path>
+                    <circle transform="translate(1.818182, 10.000000) rotate(90.000000) translate(-1.818182, -10.000000) " cx="1.81818182" cy="10" r="1.81818182"></circle>
+                    <circle transform="translate(18.181818, 10.000000) scale(1, -1) rotate(-90.000000) translate(-18.181818, -10.000000) " cx="18.1818182" cy="10" r="1.81818182"></circle>
+                    <path d="M15.4545455,10 L13.6363636,10" transform="translate(14.545455, 10.000000) scale(1, -1) rotate(180.000000) translate(-14.545455, -10.000000) "></path>
+                    <path d="M6.36363636,10 L4.54545455,10" transform="translate(5.454545, 10.000000) rotate(360.000000) translate(-5.454545, -10.000000) "></path>
+            </g>
+            <g transform="translate(11.000000, 4.000000) scale(1, -1) translate(-11.000000, -4.000000) translate(9.000000, 0.000000)"></g>
+            <g transform="translate(16.000000, 10.000000) rotate(90.000000) translate(-16.000000, -10.000000) translate(14.000000, 6.000000)">
+                <g transform="translate(2.000000, 3.740260) scale(1, -1) translate(-2.000000, -3.740260) "></g>
+            </g>
+        </g>
+    </g>
+</svg>

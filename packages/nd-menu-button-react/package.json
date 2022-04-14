@@ -1,0 +1,25 @@
+{
+  "name": "@ndustrial/nd-menu-button-react",
+  "version": "0.1.0",
+  "description": "Allows editing assets and their groups",
+  "author": "ndustrial.io <dev@ndustrial.io> (ndustrial.io)",
+  "license": "UNLICENSED",
+  "main": "src/index.tsx",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "package": "rm -rf dist && NODE_ENV=production babel --config-file ../../babel.config.js --extensions '.ts,.tsx,.js' src --out-dir dist --source-maps"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^5.0.0"
+  },
+  "dependencies": {
+    "react-aria-menubutton": "6.1.0",
+    "@types/react-aria-menubutton": "6.1.0"
+  }
+}
+

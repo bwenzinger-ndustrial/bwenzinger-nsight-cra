@@ -1,0 +1,25 @@
+{
+  "name": "@ndustrial/nd-theme-react",
+  "version": "0.1.0",
+  "description": "Allows editing assets and their groups",
+  "author": "ndustrial.io <dev@ndustrial.io> (ndustrial.io)",
+  "license": "UNLICENSED",
+  "main": "src/index.tsx",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "package": "rm -rf dist && NODE_ENV=production babel --config-file ../../babel.config.js --extensions '.ts,.tsx,.js' src --out-dir dist --source-maps"
+  },
+  "dependencies": {
+    "lodash.isnumber": "^3.0.3",
+    "@types/lodash.isnumber": "^3.0.3",
+    "polished": "^3.4.1",
+    "styled-normalize": "^8.0.6"
+  },
+  "peerDependencies": {
+    "styled-components": "^5.0.0"
+  }
+}
+

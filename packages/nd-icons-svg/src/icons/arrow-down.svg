@@ -1,0 +1,8 @@
+<svg width="1em" height="1em" stroke="#0B588A" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2">
+    <g fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(11.500000, 11.500000) scale(1, -1) translate(-11.500000, -11.500000) translate(4.000000, 3.000000)">
+            <path d="M15,9.5 L1,9.5" transform="translate(8.000000, 9.500000) rotate(90.000000) translate(-8.000000, -9.500000) "></path>
+            <polyline transform="translate(7.950000, 4.000000) rotate(90.000000) translate(-7.950000, -4.000000) " points="11.45 11 4.45 4 11.45 -3"></polyline>
+        </g>
+    </g>
+</svg>
