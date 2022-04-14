@@ -1,0 +1,50 @@
+{
+  "name": "@ndustrial/nsight-facility-admin",
+  "version": "1.0.0",
+  "description": "ndustrial.io react application for Facility Admin",
+  "main": "src/index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndustrialio/nsight-react.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "ndustrial.io <dev@ndustrial.io> (ndustrial.io)",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@babel/runtime": "^7.10.4",
+    "@ndustrial/nd-button-react": "^3.1.2",
+    "@ndustrial/nd-date-picker-react": "^4.2.0",
+    "@ndustrial/nd-dropdown-react": "^3.1.2",
+    "@ndustrial/nd-icons-svg": "^3.1.1",
+    "@ndustrial/nd-inputs-react": "^4.2.1",
+    "@ndustrial/nd-loader-react": "^2.0.2",
+    "@ndustrial/nd-menu-button-react": "^3.1.2",
+    "@ndustrial/nd-table-react": "^2.0.4",
+    "@ndustrial/nd-tabs-react": "^3.0.9",
+    "@ndustrial/nd-theme-react": "^2.2.2",
+    "@ndustrial/nd-toggle-group-react": "^2.0.1",
+    "@ndustrial/nd-tooltip-react": "^2.0.2",
+    "@ndustrial/nsight-common": "^1.2.1",
+    "@ndustrial/contxt-sdk-wrapper": "0.1.2",
+    "@ndustrial/nsight-test-utils": "^2.0.1",
+    "keymirror": "^0.1.1",
+    "lodash": "^4.17.15",
+    "luxon": "^2.3.1",
+    "moment": "^2.24.0",
+    "polished": "^4.1.3",
+    "prop-types": "^15.7.2",
+    "qs": "^6.9.1",
+    "redux-dynamic-modules": "^5.2.0",
+    "reselect": "^4.0.0",
+    "styled-components": "^5.1.0",
+    "@ndustrial/facility-editor": "^1.3.0",
+    "react-notifications": "^1.5.0"
+  },
+  "devDependencies": {
+    "history": "^4.10.1",
+    "redux-dynamic-modules-thunk": "^5.2.0"
+  }
+}

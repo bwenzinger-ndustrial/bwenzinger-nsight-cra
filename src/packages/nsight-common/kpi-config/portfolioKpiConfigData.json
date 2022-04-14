@@ -1,0 +1,215 @@
+{
+  "rows": [
+    {
+      "columns": [
+        {
+          "id": "e89fb999-fbf3-4782-938b-a67e3974f9bb",
+          "index": 0,
+          "config": {
+            "label": "Space Efficiency",
+            "unitPosition": "postfix",
+            "unit": "kWh/cu ft",
+            "isNegativeIndicator": true,
+            "dailyKey": "organization_daily_kwh_per_cuft",
+            "monthlyKey": "organization_monthly_kwh_per_cuft",
+            "tooltip": "Total portfolio energy consumption (kWh) per cubic foot of facility volume.",
+            "interval": 86400000,
+            "compareBy": "date",
+            "changeLanguage": {
+              "positive": "More Efficient",
+              "negative": "Less Efficient"
+            },
+            "detail": {
+              "chartType": "areaspline",
+              "breakdown": [
+                {
+                  "name": "Total Energy Usage",
+                  "icon": "Electricity",
+                  "isNegativeIndicator": false,
+                  "key": "facility_monthly_electricity_usage",
+                  "unit": "kWh"
+                },
+                {
+                  "name": "Cubic Feet",
+                  "icon": "Building",
+                  "isNegativeIndicator": false,
+                  "key": "facility_monthly_cubic_footage",
+                  "unit": "cu ft"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "e89fb999-fbf3-4782-938b-a67e3974f9bc",
+          "index": 1,
+          "config": {
+            "label": "Throughput Efficiency",
+            "unitPosition": "postfix",
+            "unit": "kWh/lbs",
+            "isNegativeIndicator": true,
+            "dailyKey": "organization_daily_kwh_per_lbs",
+            "monthlyKey": "organization_monthly_kwh_per_lbs",
+            "tooltip": "Total portfolio energy consumption (in kWh) per 1000 pounds of combined inbound and outbound product volume.",
+            "interval": 86400000,
+            "compareBy": "date",
+            "changeLanguage": {
+              "positive": "More Efficient",
+              "negative": "Less Efficient"
+            },
+            "detail": {
+              "chartType": "areaspline",
+              "breakdown": [
+                {
+                  "name": "Total Energy Usage",
+                  "icon": "Electricity",
+                  "isNegativeIndicator": false,
+                  "key": "facility_monthly_electricity_usage",
+                  "unit": "kWh"
+                },
+                {
+                  "name": "Total Inbound lbs",
+                  "icon": "WeightInbound",
+                  "isNegativeIndicator": true,
+                  "key": "facility_monthly_inbound_volume",
+                  "unit": "lbs"
+                },
+                {
+                  "name": "Total Outbound lbs",
+                  "icon": "WeightOutbound",
+                  "isNegativeIndicator": true,
+                  "key": "facility_monthly_outbound_volume",
+                  "unit": "lbs"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "e89fb999-ssss-4782-938b-a67e3974f9ba",
+          "index": 2,
+          "config": {
+            "label": "Throughput Energy Cost",
+            "unit": "$/lbs",
+            "isNegativeIndicator": true,
+            "dailyKey": "organization_daily_energy_spend_per_lbs",
+            "monthlyKey": "organization_monthly_energy_spend_per_lbs",
+            "tooltip": "Total portfolio energy spend (in USD) per 1000 pounds of combined inbound and outbound product volume.",
+            "interval": 86400000,
+            "compareBy": "date",
+            "changeLanguage": {
+              "positive": "More Efficient",
+              "negative": "Less Efficient"
+            },
+            "detail": {
+              "chartType": "areaspline",
+              "breakdown": [
+                {
+                  "name": "Total Energy Spend",
+                  "icon": "Dollar",
+                  "isNegativeIndicator": false,
+                  "key": "facility_monthly_electricity_spend",
+                  "unit": "$"
+                },
+                {
+                  "name": "Total Inbound lbs",
+                  "icon": "WeightInbound",
+                  "isNegativeIndicator": true,
+                  "key": "facility_monthly_inbound_volume",
+                  "unit": "lbs"
+                },
+                {
+                  "name": "Total Outbound lbs",
+                  "icon": "WeightOutbound",
+                  "isNegativeIndicator": true,
+                  "key": "facility_monthly_outbound_volume",
+                  "unit": "lbs"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "e89fb999-ssss-4782-938b-a67e3974f9bb",
+          "index": 3,
+          "config": {
+            "label": "Revenue Efficiency",
+            "unitPosition": "postfix",
+            "unit": "kWh/$",
+            "isNegativeIndicator": true,
+            "dailyKey": "organization_daily_kwh_per_revenue",
+            "monthlyKey": "organization_monthly_kwh_per_revenue",
+            "tooltip": "Total portfolio energy consumption (in kWh) per dollar (USD) of revenue reported for the month.",
+            "interval": 86400000,
+            "compareBy": "date",
+            "changeLanguage": {
+              "positive": "More Efficient",
+              "negative": "Less Efficient"
+            },
+            "detail": {
+              "chartType": "areaspline",
+              "breakdown": [
+                {
+                  "name": "Total Energy Usage",
+                  "icon": "Electricity",
+                  "isNegativeIndicator": false,
+                  "key": "facility_monthly_electricity_usage",
+                  "unit": "kWh"
+                },
+                {
+                  "name": "Revenue",
+                  "icon": "Dollar",
+                  "isNegativeIndicator": true,
+                  "key": "facility_monthly_revenue",
+                  "unit": "$"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "wip",
+          "index": 5,
+          "config": {
+            "label": "Budget",
+            "unitPosition": "prefix",
+            "unit": "$",
+            "isNegativeIndicator": false,
+            "dailyKey": "organization_daily_budget",
+            "monthlyKey": "organization_monthly_budget_over_spend",
+            "tooltip": "Total spend compared to total budgeted dollars.",
+            "interval": 86400000,
+            "compareBy": "metric",
+            "changeLanguage": {
+              "positive": "Under Budget",
+              "negative": "Over Budget"
+            },
+            "primaryMetric": "organization_monthly_budget",
+            "comparisonMetric": "organization_monthly_utility_energy_spend",
+            "detail": {
+              "chartType": "column",
+              "breakdown": [
+                {
+                  "name": "Planned",
+                  "icon": "Electricity",
+                  "isNegativeIndicator": false,
+                  "key": "facility_monthly_budget",
+                  "unit": "$",
+                  "isBaseMetric": true
+                },
+                {
+                  "name": "Actual",
+                  "icon": "Building",
+                  "isNegativeIndicator": false,
+                  "key": "facility_monthly_utility_energy_spend",
+                  "unit": "$",
+                  "isBaseMetric": false
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

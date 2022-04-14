@@ -1,0 +1,78 @@
+
+<svg width="1420px" height="293px" viewBox="0 0 1420 293" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <rect id="path-1" x="5" y="0" width="1415" height="293"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="1415" height="293" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Facility-Overview-2.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Facility-Overview-Detail---No-KPI-Selected" transform="translate(-10.000000, -303.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1440" height="1092"></rect>
+            <g id="KPI-Card-Detail/Blank" transform="translate(10.000000, 303.000000)">
+                <g id="Skeleton-Screen">
+                    <g id="Blank-KPI">
+                        <g id="Card/Tile" fill="#FFFFFF" stroke="#D8D8D8">
+                            <rect id="Rectangle" x="0.5" y="0.5" width="1419" height="292"></rect>
+                        </g>
+                        <g id="Alert-Message">
+                            <g id="Blast-Card/Status/Good">
+                                <rect id="Rectangle-2" fill="#FFFFFF" x="0" y="0" width="1420" height="293"></rect>
+                                <rect id="Rectangle-5" fill="#0B588A" x="0" y="0" width="8" height="293"></rect>
+                                <rect id="Rectangle-2" fill="#0B588A" x="0" y="0" width="5" height="293"></rect>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="Rate-Schedule-Module" transform="translate(38.000000, 150.000000)">
+                        <g id="Group-3" transform="translate(16.000000, 1.000000)">
+                            <g id="Group-22" transform="translate(0.000000, 78.266142)">
+                                <rect id="Rectangle" fill="#F3F6F9" x="0" y="6.80575149" width="97.5760319" height="24.9544221"></rect>
+                                <ellipse id="Oval" stroke="#B7CEDD" stroke-width="5" fill="#FFFFFF" cx="48.788016" cy="6.80575149" rx="6.80763014" ry="6.80575149"></ellipse>
+                            </g>
+                            <g id="Group-21" transform="translate(121.402737, 54.446012)">
+                                <rect id="Rectangle-Copy" fill="#F3F6F9" x="0" y="6.80575149" width="97.5760319" height="48.7745524"></rect>
+                                <ellipse id="Oval-Copy" stroke="#B7CEDD" stroke-width="5" fill="#FFFFFF" cx="48.788016" cy="6.80575149" rx="6.80763014" ry="6.80575149"></ellipse>
+                            </g>
+                            <g id="Group-20" transform="translate(243.940080, 28.357298)">
+                                <rect id="Rectangle-Copy-2" fill="#F3F6F9" x="0" y="6.80575149" width="97.5760319" height="74.8632664"></rect>
+                                <ellipse id="Oval-Copy-2" stroke="#B7CEDD" stroke-width="5" fill="#FFFFFF" cx="49.922621" cy="6.80575149" rx="6.80763014" ry="6.80575149"></ellipse>
+                            </g>
+                            <g id="Group-15" transform="translate(368.746632, 9.074335)">
+                                <rect id="Rectangle-Copy-3" fill="#F3F6F9" x="0" y="6.80575149" width="97.5760319" height="94.146229"></rect>
+                                <ellipse id="Oval-Copy-3" stroke="#B7CEDD" stroke-width="5" fill="#FFFFFF" cx="49.922621" cy="6.80575149" rx="6.80763014" ry="6.80575149"></ellipse>
+                            </g>
+                            <g id="Group-11" transform="translate(492.418580, 58.983180)">
+                                <rect id="Rectangle-Copy-4" fill="#F3F6F9" x="0" y="4.53716766" width="97.5760319" height="46.5059685"></rect>
+                                <ellipse id="Oval-Copy-4" stroke="#B7CEDD" stroke-width="5" fill="#FFFFFF" cx="48.788016" cy="6.80575149" rx="6.80763014" ry="6.80575149"></ellipse>
+                            </g>
+                            <g id="Group-10" transform="translate(614.955922, 77.131850)">
+                                <rect id="Rectangle-Copy-5" fill="#F3F6F9" x="0" y="7.94004341" width="97.5760319" height="24.9544221"></rect>
+                                <ellipse id="Oval-Copy-5" stroke="#B7CEDD" stroke-width="5" fill="#FFFFFF" cx="49.922621" cy="6.80575149" rx="6.80763014" ry="6.80575149"></ellipse>
+                            </g>
+                            <g id="Group-9" transform="translate(739.762475, 77.131850)">
+                                <rect id="Rectangle-Copy-6" fill="#F3F6F9" x="0" y="7.94004341" width="97.5760319" height="24.9544221"></rect>
+                                <ellipse id="Oval-Copy-6" stroke="#B7CEDD" stroke-width="5" fill="#FFFFFF" cx="48.788016" cy="6.80575149" rx="6.80763014" ry="6.80575149"></ellipse>
+                            </g>
+                            <g id="Group-8" transform="translate(863.434422, 61.251763)">
+                                <rect id="Rectangle-Copy-7" fill="#F3F6F9" x="0" y="5.67145958" width="97.5760319" height="43.1030928"></rect>
+                                <ellipse id="Oval-Copy-7" stroke="#B7CEDD" stroke-width="5" fill="#FFFFFF" cx="47.653411" cy="6.80575149" rx="6.80763014" ry="6.80575149"></ellipse>
+                            </g>
+                            <g id="Group-7" transform="translate(988.240975, 28.357298)">
+                                <rect id="Rectangle-Copy-8" fill="#F3F6F9" x="0" y="6.80575149" width="97.5760319" height="74.8632664"></rect>
+                                <ellipse id="Oval-Copy-8" stroke="#B7CEDD" stroke-width="5" fill="#FFFFFF" cx="47.653411" cy="6.80575149" rx="6.80763014" ry="6.80575149"></ellipse>
+                            </g>
+                            <g id="Group-6" transform="translate(1110.778317, 0.000000)">
+                                <rect id="Rectangle-Copy-9" fill="#F3F6F9" x="0" y="6.80575149" width="97.5760319" height="103.220564"></rect>
+                                <ellipse id="Oval-Copy-9" stroke="#B7CEDD" stroke-width="5" fill="#FFFFFF" cx="48.788016" cy="6.80575149" rx="6.80763014" ry="6.80575149"></ellipse>
+                            </g>
+                            <g id="Group-4" transform="translate(1234.450265, 54.446012)">
+                                <rect id="Rectangle-Copy-10" fill="#F3F6F9" x="0" y="6.80575149" width="97.5760319" height="48.7745524"></rect>
+                                <ellipse id="Oval-Copy-10" stroke="#B7CEDD" stroke-width="5" fill="#FFFFFF" cx="48.788016" cy="6.80575149" rx="6.80763014" ry="6.80575149"></ellipse>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

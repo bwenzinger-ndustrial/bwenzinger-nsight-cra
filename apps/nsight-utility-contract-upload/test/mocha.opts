@@ -1,0 +1,7 @@
+--require ignore-styles
+--require test/config/jsdom
+--require mock-local-storage
+--require test/config/babel-register
+--require test/config/addons
+--require test/config/enzyme-adapter
+--require test/config/globals

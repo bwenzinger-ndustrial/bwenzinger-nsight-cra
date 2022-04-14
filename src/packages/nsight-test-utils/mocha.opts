@@ -1,0 +1,7 @@
+--require ignore-styles
+--require packages/nsight-test-utils/config/jsdom
+--require mock-local-storage
+--require packages/nsight-test-utils/config/babel-register
+--require packages/nsight-test-utils/config/addons
+--require packages/nsight-test-utils/config/enzyme-adapter
+--require packages/nsight-test-utils/config/globals

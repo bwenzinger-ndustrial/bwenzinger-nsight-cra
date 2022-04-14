@@ -1,0 +1,61 @@
+contxt:
+  serviceId: '52'
+ndustrial:
+  env: beta
+
+ingress:
+  enabled: true
+  certManager: true
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: nginx-energy
+  tls: true
+  hostname: nsight.beta.ndustrial.io
+
+extraEnvVars:
+  - name: PORT
+    value: '3000'
+  - name: CLIENT_ID
+    value: 'QGJz2vmljz7wAQrNHGQdSoBRSLAnFf4j'
+  - name: CONTXT_APPLICATION_ID
+    value: '77'
+  - name: LEGACY_NSIGHT_BASE_URL
+    value: 'https://nsight-embed.beta.ndustrial.io'
+  - name: EMS_CLIENT_ID
+    value: 'e2IT0Zm9RgGlDBkLa2ruEcN9Iop6dJAS'
+  - name: EMS_HOST
+    value: 'https://ems.api.ndustrial.io'
+  - name: EVENTS_CLIENT_ID
+    value: '7jzwfE20O2XZ4aq3cO1wmk63G9GzNc8j'
+  - name: EVENTS_HOST
+    value: 'https://events.api.ndustrial.io'
+  - name: FACILITIES_CLIENT_ID
+    value: 'SgbCopArnGMa9PsRlCVUCVRwxocntlg0'
+  - name: FACILITIES_HOST
+    value: 'https://facilities.api.ndustrial.io'
+  - name: FILES_CLIENT_ID
+    value: 'SLE310LY4nDT5p06sUGPVOLlGXk5osbQ'
+  - name: FILES_HOST
+    value: 'https://files.api.staging.ndustrial.io'
+  - name: IOT_CLIENT_ID
+    value: 'iznTb30Sfp2Jpaf398I5DN6MyPuDCftA'
+  - name: IOT_HOST
+    value: 'https://feeds.api.ndustrial.io'
+  - name: RATES_HOST
+    value: 'https://rates-v2.api.ndustrial.io'
+  - name: RATES_CLIENT_ID
+    value: 'Z74s6YwxjVPGkMCZmRBhedIgMrckM0Sd'
+  - name: IOT_V2_CLIENT_ID
+    value: 'ZPrYMWVCcsyYaKKK2uiFLS71X1MB7zJP'
+  - name: IOT_V2_HOST
+    value: 'https://iot.api.ndustrial.io/v2/sources'
+  - name: SIS_CLIENT_ID
+    value: 'rPDKeB6b9n7tBo5il9eY3XrJ8yKeF3ho'
+  - name: SIS_HOST
+    value: 'https://sis.api.ndustrial.io'
+  - name: COINCIDENT_PEAK_CLIENT_ID
+    value: 'ctO2dyQmBKx181xGQ3zGc7u4Ox07PaR3'
+  - name: ENV
+    value: 'beta'
+  - name: DISABLE_FACILITY_FILTER
+    value: 'true'

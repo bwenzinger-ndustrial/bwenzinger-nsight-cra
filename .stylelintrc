@@ -1,0 +1,13 @@
+{
+  "processors": [
+    "stylelint-processor-styled-components"
+  ],
+  "extends": [
+    "@ndustrial/stylelint-config-ndustrial",
+    "stylelint-config-prettier",
+    "stylelint-config-styled-components"
+  ],
+  "rules": {
+    "sh-waqar/declaration-use-variable": null
+  }
+}

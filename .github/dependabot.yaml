@@ -1,0 +1,16 @@
+version: 2
+updates:
+  # For Node/NPM
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    labels:
+      - automerge
+  # For all repositories with docker
+  - package-ecosystem: 'docker'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    labels:
+      - automerge

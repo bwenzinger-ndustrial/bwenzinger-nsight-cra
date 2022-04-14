@@ -1,0 +1,23 @@
+import keyMirror from 'keymirror';
+
+export default keyMirror({
+  CP_DATE_SET: null,
+
+  CP_BALANCING_AUTHORITY_SET: null,
+
+  CP_DEMAND_GET_START: null,
+  CP_DEMAND_GET_SUCCESS: null,
+  CP_DEMAND_GET_FAILURE: null,
+
+  CP_FORECAST_GET_START: null,
+  CP_FORECAST_GET_SUCCESS: null,
+  CP_FORECAST_GET_FAILURE: null,
+
+  CP_HOURLY_WEATHER_GET_START: null,
+  CP_HOURLY_WEATHER_GET_SUCCESS: null,
+  CP_HOURLY_WEATHER_GET_FAILURE: null,
+
+  CP_LOCATIONS_GET_START: null,
+  CP_LOCATIONS_GET_SUCCESS: null,
+  CP_LOCATIONS_GET_FAILURE: null
+});

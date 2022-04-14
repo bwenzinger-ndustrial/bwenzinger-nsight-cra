@@ -1,0 +1,217 @@
+[
+  {
+    "label": "facility_daily_usage_pct_difference",
+    "units": "kWh",
+    "formula": "((facility_daily_iot_electricity_usage - facility_daily_utility_energy_usage) /( (facility_daily_utility_energy_usage + facility_daily_iot_electricity_usage) / 2)) * 100"
+  },
+  {
+    "label": "daily_energy_spend",
+    "units": "$",
+    "formula": "facility_daily_electricity_usage * facility_daily_blended_rate"
+  },
+  {
+    "label": "facility_monthly_energy_spend_per_lbs",
+    "units": "$/lbs",
+    "formula": "sum(facility_daily_electricity_spend) / ((sum(facility_daily_inbound_volume) + sum(facility_daily_outbound_volume)) / 1000)"
+  },
+  {
+    "label": "facility_monthly_kbtu_per_cuft",
+    "units": "kBTU/cuft",
+    "formula": "sum(facility_daily_electricity_usage) * 3.412 / max(facility_daily_cubic_footage)",
+    "breakdown": {
+      "facility_daily_cubic_footage": "max(facility_daily_cubic_footage)"
+    }
+  },
+  {
+    "label": "facility_monthly_kwh_per_lbs",
+    "units": "kWh/lbs",
+    "formula": "sum(facility_daily_electricity_usage) / ((sum(facility_daily_inbound_volume) + sum(facility_daily_outbound_volume)) / 1000)"
+  },
+  {
+    "label": "facility_monthly_kwh_per_revenue",
+    "units": "kWh/$",
+    "formula": "sum(facility_daily_electricity_usage) / sum(facility_daily_revenue)"
+  },
+  {
+    "label": "facility_daily_kwh_per_cuft",
+    "units": "kWh/cuft",
+    "formula": "sum(facility_daily_electricity_usage) / max(facility_daily_cubic_footage)"
+  },
+  {
+    "label": "facility_monthly_co2_tons",
+    "units": "CO2/tons",
+    "formula": "((sum(facility_daily_electricity_usage) * sum(facility_daily_co2_factor)) / 2000)"
+  },
+  {
+    "label": "facility_daily_co2_tons",
+    "units": "CO2/tons",
+    "formula": "((sum(facility_daily_electricity_usage) * max(facility_daily_co2_factor)) / 2000)"
+  },
+  {
+    "label": "facility_monthly_kwh_per_cuft",
+    "units": "kWh/cuft",
+    "formula": "sum(facility_daily_electricity_usage) / max(facility_daily_cubic_footage)",
+    "breakdown": {
+      "facility_daily_cubic_footage": "max(facility_daily_cubic_footage)"
+    }
+  },
+  {
+    "label": "organization_monthly_kwh_per_cuft",
+    "units": "kWh/cuft",
+    "formula": "sum(facility_monthly_electricity_usage) / max(facility_monthly_cubic_footage)",
+    "breakdown": {
+      "facility_monthly_cubic_footage": "max(facility_monthly_cubic_footage)"
+    }
+  },
+  {
+    "label": "facility_daily_blended_rate",
+    "units": "$",
+    "formula": "facility_daily_utility_energy_spend / facility_daily_utility_energy_usage"
+  },
+  {
+    "label": "facility_daily_energy_spend_per_lbs",
+    "units": "$/lbs",
+    "formula": "sum(facility_daily_electricity_spend) / ((sum(facility_daily_inbound_volume) + sum(facility_daily_outbound_volume)) / 1000)"
+  },
+  {
+    "label": "facility_daily_iot_energy_spend",
+    "units": "$",
+    "formula": "(facility_daily_blended_rate ? facility_daily_blended_rate : facility_daily_rolling_average_blended_rate) * facility_daily_iot_electricity_usage"
+  },
+  {
+    "label": "facility_daily_kbtu_per_cuft",
+    "units": "kBTU/cuft",
+    "formula": "facility_daily_electricity_usage * 3.412 / facility_daily_cubic_footage"
+  },
+  {
+    "label": "facility_daily_kwh_per_lbs",
+    "units": "kWh/lbs",
+    "formula": "sum(facility_daily_electricity_usage) / ((sum(facility_daily_inbound_volume) + sum(facility_daily_outbound_volume)) / 1000)"
+  },
+  {
+    "label": "facility_daily_kwh_per_revenue",
+    "units": "kWh/$",
+    "formula": "sum(facility_daily_electricity_usage) / sum(facility_daily_revenue)"
+  },
+  {
+    "label": "facility_daily_total_volume",
+    "units": "lbs",
+    "formula": "(facility_daily_inbound_volume + facility_daily_outbound_volume)/1000"
+  },
+  {
+    "label": "organization_daily_energy_spend_per_lbs",
+    "units": "$/lbs",
+    "formula": "sum(facility_daily_electricity_spend) / (sum((sum(facility_daily_inbound_volume) + sum(facility_daily_outbound_volume))) / 1000)"
+  },
+  {
+    "label": "organization_daily_kbtu_per_cuft",
+    "units": "kBTU/cuft",
+    "formula": "sum(facility_daily_kbtu_per_cuft)"
+  },
+  {
+    "label": "organization_daily_kwh_per_lbs",
+    "units": "kWh/lbs",
+    "formula": "sum(facility_daily_electricity_usage) / ((sum(facility_daily_inbound_volume) + sum(facility_daily_outbound_volume)) / 1000)"
+  },
+  {
+    "label": "organization_daily_kwh_per_revenue",
+    "units": "kWh/$",
+    "formula": "sum(facility_daily_electricity_usage) / sum(facility_daily_revenue)"
+  },
+  {
+    "label": "organization_monthly_energy_spend_per_lbs",
+    "units": "$/lbs",
+    "formula": "sum(facility_monthly_electricity_spend) / (sum((sum(facility_monthly_inbound_volume) + sum(facility_monthly_outbound_volume))) / 1000)"
+  },
+  {
+    "label": "organization_monthly_kbtu_per_cuft",
+    "units": "kBTU/cuft",
+    "formula": "sum(organization_monthly_kbtu_per_cuft)"
+  },
+  {
+    "label": "organization_monthly_kwh_per_lbs",
+    "units": "kWh/lbs",
+    "formula": "sum(facility_monthly_electricity_usage) / (sum((sum(facility_monthly_inbound_volume) + sum(facility_monthly_outbound_volume))) / 1000)"
+  },
+  {
+    "label": "organization_monthly_kwh_per_revenue",
+    "units": "kWh/$",
+    "formula": "sum(facility_monthly_electricity_usage) / sum(facility_monthly_revenue)"
+  },
+  {
+    "label": "facility_monthly_kwh_per_revenue",
+    "units": "kWh/$",
+    "formula": "sum(facility_monthly_electricity_usage) / sum(facility_monthly_revenue)"
+  },
+  {
+    "label": "organization_monthly_budget_over_spend",
+    "units": "$",
+    "formula": "sum(facility_monthly_utility_energy_spend) / sum(facility_monthly_budget) * 100"
+  },
+  {
+    "label": "facility_monthly_budget_over_spend",
+    "units": "$",
+    "formula": "sum(facility_monthly_utility_energy_spend) / sum(facility_monthly_budget) * 100"
+  },
+  {
+    "label": "organization_monthly_square_foot_eui",
+    "units": "kbtu/ft2",
+    "formula": "sum(facility_monthly_rolling_year_energy_usage) / max(facility_monthly_rolling_year_square_footage)",
+    "breakdown": {
+      "facility_monthly_rolling_year_square_footage": "max(facility_monthly_rolling_year_square_footage)"
+    }
+  },
+  {
+    "label": "organization_monthly_kwh_per_unit",
+    "units": "kwh/unit",
+    "formula": "sum(facility_monthly_electricity_usage) / sum(facility_monthly_production_units)"
+  },
+  {
+    "label": "organization_monthly_co2_tons",
+    "units": "tons",
+    "formula": "sum(facility_monthly_co2_tons)"
+  },
+  {
+    "label": "organization_monthly_co2_per_unit",
+    "units": "tons/unit",
+    "formula": "sum(facility_monthly_co2_tons) / sum(facility_monthly_production_units)"
+  },
+  {
+    "label": "facility_monthly_square_foot_eui",
+    "units": "kbtu/ft2",
+    "formula": "sum(facility_monthly_rolling_year_energy_usage) / max(facility_monthly_rolling_year_square_footage)",
+    "breakdown": {
+      "facility_monthly_rolling_year_square_footage": "max(facility_monthly_rolling_year_square_footage)"
+    }
+  },
+  {
+    "label": "facility_daily_kwh_per_unit",
+    "units": "kwh/unit",
+    "formula": "sum(facility_daily_electricity_usage) / sum(facility_daily_production_units)"
+  },
+  {
+    "label": "facility_monthly_kwh_per_unit",
+    "units": "kwh/unit",
+    "formula": "sum(facility_monthly_electricity_usage) / sum(facility_monthly_production_units)"
+  },
+  {
+    "label": "facility_daily_co2_per_unit",
+    "units": "tons/unit",
+    "formula": "sum(facility_daily_co2_tons) / sum(facility_daily_production_units)"
+  },
+  {
+    "label": "facility_monthly_co2_per_unit",
+    "units": "tons/unit",
+    "formula": "sum(facility_daily_co2_tons) / sum(facility_daily_production_units)"
+  },
+  {
+    "label": "facility_daily_load_factor",
+    "units": "%",
+    "formula": "(facility_daily_electricity_usage / (facility_daily_demand * 24)) * 100"
+  },
+  {
+    "label": "facility_monthly_load_factor",
+    "units": "%",
+    "formula": "(sum(facility_daily_electricity_usage) / (max(facility_daily_demand) * daysInMonthToDate(end_date) * 24)) * 100"
+  }
+]

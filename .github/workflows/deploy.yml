@@ -1,0 +1,87 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master, staging, dev]
+
+env:
+  CHART_NAME: ndustrial/deployment
+  CHART_VERSION: 0.1.27
+  REPO: ${{ github.event.repository.name }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set environment
+        run: |
+          case "${GITHUB_REF#refs/heads/}" in
+            master)   ENV=prod ;;
+            staging)  ENV=staging ;;
+            dev)      ENV=dev; SUFFIX=STAGING_$ENV ;;
+          esac
+          echo "ENV=$ENV" >> $GITHUB_ENV
+          echo "SUFFIX=${SUFFIX:-$ENV}" >> $GITHUB_ENV
+          echo "PROJECT=$(yq eval .ndustrial.project meta.yml)" >> $GITHUB_ENV
+      - run: echo "KUBE_CONFIG=KUBECONFIG_${PROJECT^^}_${SUFFIX^^}" >> $GITHUB_ENV
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.NIO_QUAY_USERNAME }}
+          password: ${{ secrets.NIO_QUAY_PASSWORD }}
+          build_args: NPM_TOKEN=${{ secrets.NIO_NPM_TOKEN }}
+          registry: quay.io
+          repository: ndustrialio/${{ env.REPO }}
+          tags: latest-${{ env.ENV }},${{ env.ENV }}-${{ github.sha }}
+      - name: Setup kubectl
+        uses: azure/k8s-set-context@v1
+        with:
+          method: kubeconfig
+          kubeconfig: ${{ secrets[env.KUBE_CONFIG] }}
+      - name: Deploy ${{ env.REPO }}-${{ env.ENV }}
+        run: |
+          helm repo add ndustrial https://ndustrialio.github.io/charts
+          helm repo update
+          helm upgrade ${{ env.REPO }}-${{ env.ENV }} ${{ env.CHART_NAME }} \
+            --install --wait --version=${{ env.CHART_VERSION }} \
+            --namespace=${{ env.PROJECT }}-${{ env.ENV }} \
+            -f ./meta.yml \
+            -f ./.github/helm/values.yml \
+            -f ./.github/helm/${{ env.ENV }}.values.yml \
+            --set image.tag=${{ env.ENV }}-${{ github.sha }} \
+            --set ndustrial.version=${{ env.ENV }}-${{ github.sha }}
+  deploy_beta:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set environment
+        run: echo "PROJECT=$(yq eval .ndustrial.project meta.yml)" >> $GITHUB_ENV
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.NIO_QUAY_USERNAME }}
+          password: ${{ secrets.NIO_QUAY_PASSWORD }}
+          build_args: NPM_TOKEN=${{ secrets.NIO_NPM_TOKEN }}
+          registry: quay.io
+          repository: ndustrialio/${{ env.REPO }}
+          tags: latest-beta,beta-${{ github.sha }}
+      - name: Setup kubectl
+        uses: azure/k8s-set-context@v1
+        with:
+          method: kubeconfig
+          kubeconfig: ${{ secrets.KUBECONFIG_ENERGY_PROD_BETA }}
+      - name: Deploy ${{ env.REPO }}-beta
+        run: |
+          helm repo add ndustrial https://ndustrialio.github.io/charts
+          helm repo update
+          helm upgrade ${{ env.REPO }}-beta ${{ env.CHART_NAME }} \
+            --install --wait --version=${{ env.CHART_VERSION }} \
+            --namespace=${{ env.PROJECT }}-beta \
+            -f ./meta.yml \
+            -f ./.github/helm/values.yml \
+            -f ./.github/helm/beta.values.yml \
+            --set image.tag=beta-${{ github.sha }} \
+            --set ndustrial.version=beta-${{ github.sha }}

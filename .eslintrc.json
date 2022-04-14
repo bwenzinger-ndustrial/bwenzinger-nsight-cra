@@ -1,0 +1,48 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "mocha": true,
+    "node": true
+  },
+  "extends": ["ndustrial", "plugin:react/recommended", "prettier"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "globals": {
+    "expect": true,
+    "faker": true,
+    "fixture": true,
+    "sandbox": true,
+    "shallow": true
+  },
+  "plugins": ["react", "react-hooks", "simple-import-sort"],
+  "root": true,
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-case-declarations": "off",
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          ["^react", "^@?\\w"], // React + external packages
+          ["^(@ndustrial)(/.*|$)"], // Internal
+          ["^"], // Absolute imports
+          ["^\\."] // relative imports
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

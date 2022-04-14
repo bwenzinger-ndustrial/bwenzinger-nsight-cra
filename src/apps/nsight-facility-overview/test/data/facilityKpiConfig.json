@@ -1,0 +1,259 @@
+{
+  "rows": [
+    {
+      "columns": [
+        {
+          "id": "e89fb999-fbf3-4782-938b-a67e3974f9bb",
+          "index": 0,
+          "config": {
+            "name": "Space Efficiency",
+            "unit": "kWh/cu ft",
+            "unitPosition": "prefix",
+            "isNegativeIndicator": true,
+            "dailyKey": "facility_daily_kwh_per_cuft",
+            "key": "facility_monthly_kwh_per_cuft",
+            "tooltip": "Total facility energy consumption (kWh) per cubic foot of facility volume.",
+            "interval": 86400000,
+            "significantDigits": 5,
+            "detail": {
+              "chartType": "areaspline",
+              "breakdown": [
+                {
+                  "name": "Total Energy Usage",
+                  "icon": "Electricity",
+                  "isNegativeIndicator": false,
+                  "key": "facility_daily_electricity_usage",
+                  "unit": "kWh",
+                  "significantDigits": 0,
+                  "aggregateFunction": "sum"
+                },
+                {
+                  "name": "Cubic Feet",
+                  "icon": "Building",
+                  "isNegativeIndicator": false,
+                  "key": "facility_daily_cubic_footage",
+                  "unit": "cu ft",
+                  "significantDigits": 0,
+                  "aggregateFunction": "max"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "e89fb999-fbf3-4782-938b-a67e3974f9bc",
+          "index": 1,
+          "config": {
+            "name": "Throughput Efficiency",
+            "unit": "kWh/lbs",
+            "unitPosition": "prefix",
+            "isNegativeIndicator": true,
+            "dailyKey": "facility_daily_kwh_per_lbs",
+            "key": "facility_monthly_kwh_per_lbs",
+            "tooltip": "Total facility energy consumption (in kWh) per 1000 pounds of combined inbound and outbound product volume.",
+            "interval": 86400000,
+            "significantDigits": 2,
+            "detail": {
+              "chartType": "areaspline",
+              "breakdown": [
+                {
+                  "name": "Total Energy Usage",
+                  "icon": "Electricity",
+                  "isNegativeIndicator": false,
+                  "key": "facility_daily_electricity_usage",
+                  "unit": "kWh",
+                  "significantDigits": 0,
+                  "aggregateFunction": "sum"
+                },
+                {
+                  "name": "Total Inbound lbs",
+                  "icon": "WeightInbound",
+                  "isNegativeIndicator": true,
+                  "key": "facility_daily_inbound_volume",
+                  "unit": "lbs",
+                  "significantDigits": 0,
+                  "aggregateFunction": "sum"
+                },
+                {
+                  "name": "Total Outbound lbs",
+                  "icon": "WeightOutbound",
+                  "isNegativeIndicator": true,
+                  "key": "facility_daily_outbound_volume",
+                  "unit": "lbs",
+                  "significantDigits": 0,
+                  "aggregateFunction": "sum"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "e89fb999-ssss-4782-938b-a67e3974f9ba",
+          "index": 2,
+          "config": {
+            "name": "Throughput Energy Cost",
+            "unit": "$/lbs",
+            "unitPosition": "postfix",
+            "isNegativeIndicator": true,
+            "dailyKey": "facility_daily_energy_spend_per_lbs",
+            "key": "facility_monthly_energy_spend_per_lbs",
+            "tooltip": "Total facility energy spend (in USD) per 1000 pounds of combined inbound and outbound product volume.",
+            "interval": 86400000,
+            "significantDigits": 2,
+            "detail": {
+              "chartType": "areaspline",
+              "breakdown": [
+                {
+                  "name": "Total Energy Spend",
+                  "icon": "Dollar",
+                  "isNegativeIndicator": false,
+                  "key": "facility_daily_electricity_spend",
+                  "unit": "$",
+                  "significantDigits": 2,
+                  "aggregateFunction": "sum"
+                },
+                {
+                  "name": "Total Inbound lbs",
+                  "icon": "WeightInbound",
+                  "isNegativeIndicator": true,
+                  "key": "facility_daily_inbound_volume",
+                  "unit": "lbs",
+                  "significantDigits": 0,
+                  "aggregateFunction": "sum"
+                },
+                {
+                  "name": "Total Outbound lbs",
+                  "icon": "WeightOutbound",
+                  "isNegativeIndicator": true,
+                  "key": "facility_daily_outbound_volume",
+                  "unit": "lbs",
+                  "significantDigits": 0,
+                  "aggregateFunction": "sum"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "e89fb999-ssss-4782-938b-a67e3974f9bb",
+          "index": 3,
+          "config": {
+            "name": "Revenue Efficiency",
+            "unit": "kWh/$",
+            "unitPosition": "prefix",
+            "isNegativeIndicator": true,
+            "dailyKey": "facility_daily_kwh_per_revenue",
+            "key": "facility_monthly_kwh_per_revenue",
+            "tooltip": "Total facility energy consumption (in kWh) per dollar (USD) of revenue reported for the month.",
+            "interval": 86400000,
+            "significantDigits": 2,
+            "detail": {
+              "chartType": "areaspline",
+              "breakdown": [
+                {
+                  "name": "Total Energy Usage",
+                  "icon": "Electricity",
+                  "isNegativeIndicator": false,
+                  "key": "facility_daily_electricity_usage",
+                  "unit": "kWh",
+                  "significantDigits": 0,
+                  "aggregateFunction": "sum"
+                },
+                {
+                  "name": "Revenue",
+                  "icon": "Dollar",
+                  "isNegativeIndicator": true,
+                  "key": "facility_daily_revenue",
+                  "unit": "$",
+                  "significantDigits": 2
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "e89fb999-ssss-4782-938b-a67e3974f9fa",
+          "index": 5,
+          "config": {
+            "cardDisplayLabel": "Actual Spend",
+            "label": "Actual Spend vs Budget $",
+            "unit": "USD",
+            "unitPosition": "postfix",
+            "isNegativeIndicator": false,
+            "dailyKey": "facility_daily_budget_over_spend",
+            "monthlyKey": "facility_monthly_budget_over_spend",
+            "tooltip": "Total spend compared to total budgeted dollars.",
+            "interval": 86400000,
+            "significantDigits": 0,
+            "compareBy": "metric",
+            "primaryMetric": "facility_monthly_utility_energy_spend",
+            "comparisonMetric": "facility_monthly_budget",
+            "minimumCalendarInterval": "month",
+            "detail": {
+              "chartType": "column",
+              "breakdown": [
+                {
+                  "name": "Budget",
+                  "icon": "Electricity",
+                  "isNegativeIndicator": false,
+                  "key": "facility_monthly_budget",
+                  "unit": "$",
+                  "significantDigits": 0,
+                  "isBaseMetric": false,
+                  "aggregateFunction": "sum"
+                },
+                {
+                  "name": "Actual",
+                  "icon": "Building",
+                  "isNegativeIndicator": false,
+                  "key": "facility_monthly_utility_energy_spend",
+                  "unit": "$",
+                  "significantDigits": 0,
+                  "isBaseMetric": true,
+                  "aggregateFunction": "sum"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "co2-wip",
+          "index": 8,
+          "config": {
+            "name": "Carbon Footprint",
+            "unit": "Lbs CO&#8322;",
+            "isNegativeIndicator": true,
+            "dailyKey": "facility_daily_co2_tons",
+            "monthlyKey": "facility_monthly_co2_tons",
+            "tooltip": "Scope 2 CO2 Emissions, metric calculated using a facility-specific emissions factor and kWh Consumed.",
+            "interval": 86400000,
+            "significantDigits": 0,
+            "detail": {
+              "chartType": "areaspline",
+              "breakdown": [
+                {
+                  "name": "Total Energy Usage",
+                  "icon": "Electricity",
+                  "isNegativeIndicator": false,
+                  "key": "facility_daily_electricity_usage",
+                  "unit": "kWh",
+                  "significantDigits": 0,
+                  "aggregateFunction": "sum"
+                },
+                {
+                  "name": "CO2 Factor",
+                  "icon": "TrendActivity",
+                  "isNegativeIndicator": true,
+                  "key": "facility_daily_co2_factor",
+                  "unit": "",
+                  "significantDigits": 2,
+                  "aggregateFunction": "max"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

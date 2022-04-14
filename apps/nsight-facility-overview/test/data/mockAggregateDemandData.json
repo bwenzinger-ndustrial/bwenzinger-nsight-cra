@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Highest",
+    "data": [200]
+  },
+  {
+    "name": "Other",
+    "data": [160]
+  },
+  {
+    "name": "Refrigeration",
+    "data": [120]
+  },
+  {
+    "name": "Battery Chargers",
+    "data": [96]
+  },
+  {
+    "name": "Lighting",
+    "data": [66]
+  }
+]

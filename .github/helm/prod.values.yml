@@ -1,0 +1,73 @@
+contxt:
+  serviceId: '52'
+ndustrial:
+  env: prod
+
+ingress:
+  enabled: true
+  certManager: true
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: nginx-energy
+  tls: true
+  hostname: nsight.ndustrial.io
+
+extraEnvVars:
+  - name: PORT
+    value: '3000'
+  - name: CLIENT_ID
+    value: 'GrVf5QTockSwbGzWvYkyJrADrHlppugL'
+  - name: CONTXT_APPLICATION_ID
+    value: '77'
+  - name: LEGACY_NSIGHT_BASE_URL
+    value: 'https://nsight-embed.ndustrial.io'
+  - name: EMS_CLIENT_ID
+    value: 'e2IT0Zm9RgGlDBkLa2ruEcN9Iop6dJAS'
+  - name: EMS_HOST
+    value: 'https://ems.api.ndustrial.io'
+  - name: EVENTS_CLIENT_ID
+    value: '7jzwfE20O2XZ4aq3cO1wmk63G9GzNc8j'
+  - name: EVENTS_HOST
+    value: 'https://events.api.ndustrial.io'
+  - name: FACILITIES_CLIENT_ID
+    value: 'SgbCopArnGMa9PsRlCVUCVRwxocntlg0'
+  - name: FACILITIES_HOST
+    value: 'https://facilities.api.ndustrial.io'
+  - name: FILES_CLIENT_ID
+    value: 'VZJ2MRd71dM9oX2hB1EVAEjUe6loL7pl'
+  - name: FILES_HOST
+    value: 'https://files.api.ndustrial.io'
+  - name: IOT_CLIENT_ID
+    value: 'iznTb30Sfp2Jpaf398I5DN6MyPuDCftA'
+  - name: IOT_HOST
+    value: 'https://feeds.api.ndustrial.io'
+  - name: RATES_HOST
+    value: 'https://rates-v2.api.ndustrial.io'
+  - name: RATES_CLIENT_ID
+    value: 'Z74s6YwxjVPGkMCZmRBhedIgMrckM0Sd'
+  - name: IOT_V2_CLIENT_ID
+    value: 'ZPrYMWVCcsyYaKKK2uiFLS71X1MB7zJP'
+  - name: IOT_V2_HOST
+    value: 'https://iot.api.ndustrial.io/v2/sources'
+  - name: SIS_CLIENT_ID
+    value: 'rPDKeB6b9n7tBo5il9eY3XrJ8yKeF3ho'
+  - name: SIS_HOST
+    value: 'https://sis.api.ndustrial.io'
+  - name: COINCIDENT_PEAK_CLIENT_ID
+    value: 'ctO2dyQmBKx181xGQ3zGc7u4Ox07PaR3'
+  - name: ENV
+    value: 'production'
+  - name: ANALYTICS_GA_ID
+    value: UA-146347025-3
+  - name: ANALYTICS_HOTJAR_ID
+    value: '1616810'
+  - name: ANALYTICS_PENDO_ID
+    value: c110618e-4b5d-4ce4-66cf-9d9505ce2014
+  - name: AG_GRID_LICENSE
+    value: 'CompanyName=ndustrial.io,LicensedApplication=nsight,LicenseType=SingleApplication,LicensedConcurrentDeveloperCount=10,LicensedProductionInstancesCount=1,AssetReference=AG-016416,ExpiryDate=11_June_2022_[v2]_MTY1NDkwMjAwMDAwMA==be695942c83f6575a6cbe98ee39606ac'
+  # possible values: contxtAuth, coordinator, events, facilities, files, iot, admin, coincident_peak, ems, iot_v2, nionic, rates, sis
+  - name: CONTXT_SDK_STAGING_OVERRIDES
+    value:
+  # possible values: contxtAuth, coordinator, events, facilities, files, iot, admin, coincident_peak, ems, iot_v2, nionic, rates, sis
+  - name: CONTXT_SDK_PRODUCTION_OVERRIDES
+    value:

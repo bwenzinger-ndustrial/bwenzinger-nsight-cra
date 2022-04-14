@@ -1,0 +1,22 @@
+{
+  "name": "@ndustrial/nsight-legacy-analytics",
+  "version": "1.0.3",
+  "description": "ndustrial.io analytics (legacy angular adapter)",
+  "main": "src/index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndustrialio/nsight-react.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "ndustrial.io <dev@ndustrial.io> (ndustrial.io)",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@ndustrial/nsight-common": "^1.2.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.1",
+    "react-router-dom": "^5.0.0"
+  }
+}

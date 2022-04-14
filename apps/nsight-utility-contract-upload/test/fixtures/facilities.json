@@ -1,0 +1,26 @@
+[
+  {
+    "label": "Henderson_137",
+    "value": "Henderson_137",
+    "id": 12,
+    "organization": {
+      "id": "02efa741-a96f-4124-a463-ae13a704b8fc",
+      "name": "Lineage Logistics",
+      "createdAt": "2017-09-06T17:43:23.577Z",
+      "updatedAt": "2017-09-06T17:43:23.577Z"
+    },
+    "url": "/facility/12"
+  },
+  {
+    "label": "Santa Maria - S Blosser_123",
+    "value": "Santa Maria - S Blosser_123",
+    "id": 155,
+    "organization": {
+      "id": "02efa741-a96f-4124-a463-ae13a704b8fc",
+      "name": "Lineage Logistics",
+      "createdAt": "2017-09-06T17:43:23.577Z",
+      "updatedAt": "2017-09-06T17:43:23.577Z"
+    },
+    "url": "/facility/155"
+  }
+]

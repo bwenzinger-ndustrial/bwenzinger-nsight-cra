@@ -1,0 +1,37 @@
+# After deploying production, automatically open up PRs from dev
+# into staging, as well as another PR from master into dev.
+#
+# With scheduled PRs of staging to master, this ensures that
+# we keep staging up to date, while also ensuring that it stays
+# a bit behind, keeping us from automaticaly merging straight
+# to master from development if we were to create these PRs
+# on a schedule as well.
+name: Post Prod Push
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+
+jobs:
+  post-prod-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: dev #From
+          base: staging #To
+
+      # Catches any patches done on master, but not in the lower branches
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master #From
+          base: dev #To

@@ -1,0 +1,76 @@
+contxt:
+  serviceId: '21'
+ndustrial:
+  env: dev
+
+ingress:
+  enabled: true
+  certManager: true
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: nginx-energy
+  tls: true
+  hostname: nsight.dev.ndustrial.io
+
+extraEnvVars:
+  - name: PORT
+    value: '3000'
+  - name: CLIENT_ID
+    value: 's2Lxf5JQyUSveAPXaceg7Xck6naH7CjA'
+  - name: CONTXT_APPLICATION_ID
+    value: '57'
+  - name: LEGACY_NSIGHT_BASE_URL
+    value: 'https://nsight-embed.dev.ndustrial.io'
+  - name: NSIGHT2_CLIENT_ID
+    value: 's2Lxf5JQyUSveAPXaceg7Xck6naH7CjA'
+  - name: NSIGHT2_CONTXT_APPLICATION_ID
+    value: '57'
+  - name: DASHBOARD_CLIENT_ID
+    value: '4nl00qf5yKSZayWMHMYwuGVw6vpTli7j'
+  - name: DASHBOARD_HOST
+    value: 'https://dashboard-staging.api.ndustrial.io'
+  - name: EMS_CLIENT_ID
+    value: 'e2IT0Zm9RgGlDBkLa2ruEcN9Iop6dJAS'
+  - name: EMS_HOST
+    value: 'https://ems.api.ndustrial.io'
+  - name: EVENTS_CLIENT_ID
+    value: 'dn4MaocJFdKtsBy9sFFaTeuJWL1nt5xu'
+  - name: EVENTS_HOST
+    value: 'https://events.api.staging.ndustrial.io'
+  - name: FACILITIES_CLIENT_ID
+    value: 'xG775XHIOZVUn84seNeHXi0Qe55YuR5w'
+  - name: FACILITIES_HOST
+    value: 'https://assets.api.staging.ndustrial.io'
+  - name: FILES_CLIENT_ID
+    value: 'SLE310LY4nDT5p06sUGPVOLlGXk5osbQ'
+  - name: FILES_HOST
+    value: 'https://files.api.staging.ndustrial.io'
+  - name: IOT_CLIENT_ID
+    value: 'm35AEcxD8hf65sq04ZU7yFxqpqVkKzES'
+  - name: IOT_HOST
+    value: 'https://feeds.api.staging.ndustrial.io'
+  - name: IOT_V2_CLIENT_ID
+    value: 'ZPrYMWVCcsyYaKKK2uiFLS71X1MB7zJP'
+  - name: IOT_V2_HOST
+    value: 'https://iot.api.ndustrial.io/v2/sources'
+  - name: RATES_CLIENT_ID
+    value: 'A3t0zn44aURi2Qnldh95GtD5HvP7P5i9'
+  - name: RATES_HOST
+    value: 'https://rates-v2-staging.api.ndustrial.io'
+  - name: SIS_CLIENT_ID
+    value: 'HKKM0vxrAjWCchlVYvStQX4pHRC9bf55'
+  - name: SIS_HOST
+    value: 'https://sis-staging.api.ndustrial.io'
+  # Set this to true to enable all facilities
+  - name: DISABLE_FACILITY_FILTER
+    value: 'true'
+  - name: ENV
+    value: 'development'
+  - name: AG_GRID_LICENSE
+    value: 'CompanyName=ndustrial.io,LicensedApplication=nsight,LicenseType=SingleApplication,LicensedConcurrentDeveloperCount=10,LicensedProductionInstancesCount=1,AssetReference=AG-016416,ExpiryDate=11_June_2022_[v2]_MTY1NDkwMjAwMDAwMA==be695942c83f6575a6cbe98ee39606ac'
+  # possible values: contxtAuth, coordinator, events, facilities, files, iot, admin, coincident_peak, ems, iot_v2, nionic, rates, sis
+  - name: CONTXT_SDK_STAGING_OVERRIDES
+    value:
+  # possible values: contxtAuth, coordinator, events, facilities, files, iot, admin, coincident_peak, ems, iot_v2, nionic, rates, sis
+  - name: CONTXT_SDK_PRODUCTION_OVERRIDES
+    value:

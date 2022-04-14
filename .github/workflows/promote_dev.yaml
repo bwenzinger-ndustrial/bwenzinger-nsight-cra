@@ -1,0 +1,26 @@
+name: Promote Dev
+on:
+  push:
+    branches: [dev]
+  workflow_dispatch:
+
+concurrency:
+  group: 'promote-dev'
+  cancel-in-progress: true
+
+jobs:
+  promote-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Create Pull Request
+        uses: devops-infra/action-pull-request@v0.4.2
+        with:
+          github_token: ${{ secrets.NIO_BOT_TOKEN }}
+          source_branch: dev
+          target_branch: staging
+          get_diff: true
+          template: .github/PROMOTE_TEMPLATE.md
+          title: 'chore: promote dev'

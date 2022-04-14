@@ -1,0 +1,46 @@
+@import '~ag-grid-community/dist/styles/ag-grid.scss';
+@import '~ag-grid-community/dist/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin';
+
+$primary: #2764ae;
+$secondary: #2ab7cc;
+
+.ag-theme-alpine {
+  @include ag-theme-alpine(
+    (
+      // Default border for cells. This can be used to specify the border-style and border-color properties e.g. `dashed red` but the border-width is fixed at 1px.
+        cell-horizontal-border: solid ag-derived(secondary-border-color),
+      row-group-indent-size: 10px
+    )
+  );
+
+  .ag-group-value {
+    height: 100%;
+  }
+
+  .primary-header,
+  .comparison-header {
+    color: white;
+    .ag-icon {
+      color: white;
+    }
+  }
+
+  .ag-header-cell-text {
+    overflow: hidden;
+    white-space: break-spaces;
+    font-size: 0.75rem;
+  }
+
+  .primary-header {
+    background-color: $primary;
+  }
+  .comparison-header {
+    background-color: $secondary;
+  }
+
+  .ag-header-cell,
+  .ag-header-group-cell {
+    // or write CSS selectors to make customisations beyond what the parameters support
+    border-right: 1px solid ag-param(secondary-border-color);
+  }
+}

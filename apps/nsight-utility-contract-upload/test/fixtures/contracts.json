@@ -1,0 +1,24 @@
+[
+  {
+    "id": 0,
+    "name": "Contract 0",
+    "status": "inactive",
+    "startDate": "2018-04-07",
+    "endDate": "2018-04-07",
+    "rateNarrative": "This is sample text 1",
+    "reminders": ["Kyle Doe"],
+    "label": "Contract 0",
+    "file": "http://www.pdf995.com/samples/pdf.pdf"
+  },
+  {
+    "id": 1,
+    "name": "Contract 1",
+    "status": "active",
+    "startDate": "2018-04-07",
+    "endDate": "2018-04-07",
+    "rateNarrative": "This is sample text 2",
+    "reminders": ["Kyle Doe"],
+    "label": "Contract 1",
+    "file": "http://www.pdf995.com/samples/pdf.pdf"
+  }
+]

@@ -1,0 +1,29 @@
+name: 'Monday Master PR'
+# This will automatically open a PR on Monday to merge staging into master. This will ensure
+# we keep master from becoming to far behind. We have another action to automatically open
+# PRs to update staging after we merge to master. This will mean that at any given time, staging
+# should be no more than a week behind dev, and master should be no more than 2 weeks behind dev,
+# assuming the PRs get merged.
+#
+# See https://github.com/marketplace/actions/create-pull-request for more documentation on this action.
+
+on:
+  workflow_dispatch:
+  # Run each Monday at midnight
+  schedule:
+    - cron: '0 0 * * 1'
+
+jobs:
+  monday-master-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: staging #From
+          base: master #To

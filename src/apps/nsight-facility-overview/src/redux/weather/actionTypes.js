@@ -1,0 +1,10 @@
+import keyMirror from 'keymirror';
+
+export default keyMirror({
+  GET_WEATHER_PRIMARY_START: null,
+  GET_WEATHER_PRIMARY_SUCCESS: null,
+  GET_WEATHER_PRIMARY_FAILURE: null,
+  GET_WEATHER_SECONDARY_START: null,
+  GET_WEATHER_SECONDARY_SUCCESS: null,
+  GET_WEATHER_SECONDARY_FAILURE: null
+});

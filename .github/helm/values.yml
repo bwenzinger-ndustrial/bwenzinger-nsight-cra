@@ -1,0 +1,38 @@
+replicaCount: 2
+
+image:
+  registry: quay.io
+  repository: ndustrialio/nsight
+  pullSecrets:
+    - nio-quay-pull-secret
+
+extraEnvVarsSecret: energy-env
+
+resources:
+  limits:
+    cpu: '1'
+    memory: 2Gi
+  requests:
+    cpu: 500m
+    memory: 512Mi
+
+ports:
+  - containerPort: 3000
+    name: http
+    protocol: TCP
+  - containerPort: 3000
+    name: https
+    protocol: TCP
+
+updateStrategy:
+  rollingUpdate:
+    maxSurge: 25%
+    maxUnavailable: 25%
+
+livenessProbe:
+  enabled: true
+  path: /healthz
+
+readinessProbe:
+  enabled: true
+  path: /healthz
