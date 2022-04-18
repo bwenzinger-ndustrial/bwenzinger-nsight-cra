@@ -54,7 +54,7 @@
     "react-is": "^18.0.0",
     "react-redux": "^7.0.2",
     "react-router": "^5.1.2",
-    "react-router-dom": "^5.0.0",
+    "react-router-dom": "^6.3.0",
     "redux": "^4.0.1",
     "redux-dynamic-modules": "^5.2.0",
     "redux-dynamic-modules-core": "^5.2.0",
